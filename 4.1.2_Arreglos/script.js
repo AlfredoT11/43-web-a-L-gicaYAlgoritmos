@@ -196,4 +196,20 @@ function encontrarIndice(arreglo, valorABuscar){
 console.log(`El índice del valor Papaya es: ${encontrarIndice(frutas3, "Papaya")}`);
 console.log("--------------------------------------------");
 
+let mascotas = ["Bowie", "Tigrillo", "Cosa", "Mocka"];
+function agregarElemento(arreglo, nuevoValor){
+    let valorPrevio = arreglo.find((valor) => valor === nuevoValor);
+    if(valorPrevio !== undefined){
+        console.log("El valor ya existe");
+        return;
+    }
+    console.log("Agregando el valor");
+    arreglo.push(nuevoValor);
+}
+
+console.log(mascotas);
+agregarElemento(mascotas, "Gruñiz");
+console.log(mascotas);
+agregarElemento(mascotas, "Cosa");
+console.log(mascotas);
 
