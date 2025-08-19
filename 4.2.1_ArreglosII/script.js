@@ -131,3 +131,12 @@ let nombresMenoresDeEdadEnMayusculas = personas.filter(persona => { return perso
 .map((personaMenorDeEdad) => {return personaMenorDeEdad.nombre.toUpperCase()});
 
 console.log(nombresMenoresDeEdadEnMayusculas);
+
+// Ejemplo de 2 filtros.
+let personasCuyoPrimerApellidoEmpieceConPYSuPrimerNombreTengaMasDe4Letros = personas.filter((persona) => {
+    return persona.primerApellido.charAt(0) === 'P';
+})
+.filter(persona => {
+    return persona.nombre.length > 4;
+});
+console.log(personasCuyoPrimerApellidoEmpieceConPYSuPrimerNombreTengaMasDe4Letros);
